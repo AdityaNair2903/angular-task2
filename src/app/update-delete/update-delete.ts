@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./update-delete.css']
 })
 export class UpdateDelete {
-  postId = '';
+  id = '';
   title = '';
   body = '';
   result: any = null;
@@ -20,14 +20,14 @@ export class UpdateDelete {
 
   updatePost() {
     const payload = {
-      id: +this.postId,
+      id: +this.id,
       title: this.title,
       body: this.body,
       userId: 1
     };
 
     this.http
-      .put(`https://jsonplaceholder.typicode.com/posts/${this.postId}`, payload)
+      .put(`https://jsonplaceholder.typicode.com/posts/${this.id}`, payload)
       .subscribe((data) => {
         this.result = data;
       });
@@ -35,7 +35,7 @@ export class UpdateDelete {
 
   deletePost() {
     this.http
-      .delete(`https://jsonplaceholder.typicode.com/posts/${this.postId}`)
+      .delete(`https://jsonplaceholder.typicode.com/posts/${this.id}`)
       .subscribe((data) => {
         this.result = { deleted: true, response: data };
       });
