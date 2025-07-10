@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  gap: 20px;
+  background-color: #3f51b5;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.router-link-active {
+  background-color: rgba(255, 255, 255, 0.3);
+}

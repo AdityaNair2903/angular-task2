@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  gap: 1rem;
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3f51b5;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}

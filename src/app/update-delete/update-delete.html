@@ -1,0 +1,12 @@
+<h3>Update or Delete Post</h3>
+<input [(ngModel)]="postId" placeholder="Id"><br><br>
+<input [(ngModel)]="title" placeholder="Title"><br><br>
+<textarea [(ngModel)]="body" placeholder="Body"></textarea><br><br>
+
+<button (click)="updatePost()">Update</button>
+<button (click)="deletePost()">Delete</button>
+
+<div *ngIf="result">
+  <h4>Response:</h4>
+  <pre>{{ result | json }}</pre>
+</div>

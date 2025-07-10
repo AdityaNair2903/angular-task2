@@ -1,0 +1,10 @@
+<h3>Create New Post</h3>
+<input [(ngModel)]="title" placeholder="Title">
+<br><br>
+<input [(ngModel)]="body" placeholder="Body">
+<button (click)="createPost()">Create Post</button>
+
+<div *ngIf="createdPost">
+  <h4>Created Post:</h4>
+  <pre>{{ createdPost | json }}</pre>
+</div>

@@ -1,0 +1,10 @@
+<input [(ngModel)]="search" placeholder="Search posts">
+<button (click)="fetchPosts()"> Search </button>
+
+<ul>
+    <li *ngFor="let post of posts">
+        <h3> {{post.title}} </h3>
+        <p> {{post.body}} </p>
+    </li>
+    
+</ul>
